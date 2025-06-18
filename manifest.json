@@ -1,0 +1,11 @@
+{
+	"id": "llm-chat-plugin",
+	"name": "LLM Chat Plugin",
+	"version": "1.1.0",
+	"minAppVersion": "0.15.0",
+	"description": "Chat with your favorite LLM's via any OpenAI-compatible API.",
+	"author": "wntrondaway",
+	"authorUrl": "https://github.com/wntrodnaway",
+	"fundingUrl": "https://obsidian.md/pricing",
+	"isDesktopOnly": false
+}
