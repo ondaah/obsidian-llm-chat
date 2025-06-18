@@ -146,18 +146,18 @@ class SettingsTab extends PluginSettingTab {
 			this.models = Array.isArray(data.data)
 				? data.data.map((m: any) => m.id)
 				: [];
-			console.log("Fetched models:", this.models);
 		} catch (err) {
-			console.error("Error fetching models:", err);
 			new Notice("Unable to get available models. Check API URL.");
 			this.models = [];
 		}
 	}
 
 	updateModelDropdown() {
-		const selectEl = this.modelDropdownSetting.components.find(
-			(c) => (c as any).selectEl
-		)?.selectEl as HTMLSelectElement;
+		const selectEl = (
+			this.modelDropdownSetting.components.find(
+				(c) => (c as any).selectEl
+			) as any
+		).selectEl as HTMLSelectElement;
 		if (!selectEl) return;
 
 		const currentValue = selectEl.value;
